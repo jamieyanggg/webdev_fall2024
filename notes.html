@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- charset specifies character set in coding. 
+         without this tag, some fonts won't load properly -->
+        <meta charset="utf-8"/>
+        <!-- the viewport tag sets the initial scale and ensures
+         proper responsive behavior -->
+         <meta name="viewport" content="width=device-width, intiial_scale=1"/>
+         <!-- the title tage shows up in the browser tab as the big blue name -->
+         <title>HTML Elements 101</title>
+         <!-- This is how we make an internal stylesheet -->
+         <style>
+            p {
+                /* color is font color only unless otherwise specified */
+                color: blueviolet;
+            }
+
+            h2, h3, h4 {
+                background-color: #00FF99;
+            }
+
+            a {
+                color: rgb(205, 211, 54);
+                background-color: rbga(0,0,0,0.5);
+            }
+         </style>
+    </head>
+    <body>
+        <!-- everything inside the body tag shos up to the user unless modified to not be visible with css -->
+         text without markup will still show up
+        <!-- Only 1 H1 per page -->
+         <h1 id="top">Heading 1: This is the most important text on the page. This is the title. We should only have one per page.</h1>
+         <h2>Heading 2: as the number gets bigger, the text gets smaller, so does it's weight (aka the importance on the page).</h2>
+         <h3>Heading 3</h3>
+         <h4>Heading 4</h4>
+         <h5>Heading 5</h5>
+         <h6>Heading 6</h6>
+         <!-- page divider aka a horizontal rule-->
+         <hr />
+         <!-- misc text will most likely be p tag -->
+          <!-- if you don't close each p tag, they will combine into 1 giant paragraph -->
+           <!-- <br/> is a soft return aka starts a new line -->
+            <!-- <em> means emphasize aka italicize -->
+            <!-- <strong> means bold -->
+            <!-- <span> means  -->
+            <!-- <div> displays block -->
+          <p>paragraph 1 <br/> <em>hi</em> <strong>hi</strong> hi <br> paragraph 1</p>
+          <p> <span style="color:red">paragraph 2 </span></p>
+          <p>paragraph 3</p>
+          <h2>Buttermilk Pancake</h2>
+          <p>These are the best pancakes in the world!</p>
+          <!-- img hosted on other websites -->
+          <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.olgasflavorfactory.com%2Fautumn-favorites%2Fbuttermilk-pancakes%2F&psig=AOvVaw3Xr0xIzNu--Dur8daCvxv9&ust=1725634757100000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIjHuMeIrIgDFQAAAAAdAAAAABAE"/>
+          <!-- local img in same folder -->
+          <img src="pancake.jpg" widtg="100px" height="300px"/>
+          <!-- local img in subfolder -->
+          <img src="img/pancake.jpg"/>
+          <hr/>
+          <!-- # is a dummy link aka a pretend tag that goes nowhere -->
+          <a href="#">Dummy Link using #</a>
+          <a href="about/index.html">About Page</a>
+          <!-- linking to an element on the same page by ID -->
+          <a href="#top">Back to top</a>
+
+        <!-- ul mean unordered list aka order doesn't matter -->
+          <ul>
+            <li>Ingredient</li>
+            <li>Ingredient</li>
+            <li>Ingredient
+                <ol>
+                    <li>Sub item 1</li>
+                    <li>Sub item 2</li>
+                    <li>Sub item 3</li>
+                </ol>
+            </li>
+            <li>Ingredient</li>
+          </ul>
+
+        <!-- sometimes order matters, use ordered list -->
+        <ol>
+            <li>Ingredient</li>
+            <li>Ingredient
+                <ol>
+                    <li>Sub item 1</li>
+                    <li>Sub item 2</li>
+                    <li>Sub item 3</li>
+                </ol>
+            </li>
+            <li>Ingredient</li>
+            <li>Ingredient</li>
+          </ol>
+    </body>
+</html>
