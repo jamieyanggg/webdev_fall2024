@@ -14,13 +14,41 @@
     <nav>
       <!-- use UL LI and A for Nav Links within our NAV tag -->
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about/index.html">About</a></li>
+        <li><a href="../contact/index.html">Contact</a></li>
       </ul>
     </nav>
     <h1>Contact Us</h1>
     <!-- Bonus - Place Images Here -->
+     <img src="../img/chicken3.jpeg"/>
     <!-- Double Bonus - Add Contact Form Here -->
+    <form>
+      <fieldset>
+        <legend>Contact Us</legend>
+        <label for="first-name">First Name:</label>
+        <input type="text" name="first-name" id="first-name" required placeholder="enter first name"/>
+        <br/>
+        <br/>
+        <label for="last-name">Last Name:</label>
+        <input type="text" name="last-name" id="last-name" required placeholder="enter last name" maxlength="15"/>
+        <br/>
+        <br/>
+        <label for="age">Your Age:</label>
+        <input type="number" name="age" id="age" min="0" max="100" required placeholder=" age"/>
+        <br/>
+        <br/>
+        <label for="email">Email Address:</label>
+        <input type="text" name="email" id="email" required placeholder="enter email address"/>
+        <br/>
+        <br/>
+        <label for="comments">Any Comments?</label>
+        <br/>
+        <textarea name="comments" cols="30" rows="15" required placeholder="Enter your comment here"></textarea>
+        <br/>
+        <br/>
+        <input name="submit" value="Submit Form" type="button" disabled/>
+      </fieldset>
+     </form>
   </body>
 </html>
