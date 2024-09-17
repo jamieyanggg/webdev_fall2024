@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+         <meta name="viewport" content="width=device-width, intiial_scale=1"/>
+         <title>Intro CSS</title>
+         <!-- Internal Style Sheet -->
+         <style type="text/css">
+            /* universal selector, commonly used to zero out the browser default margins and padding */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            /* tag selectors aka type or element selectors apply to evey instance of that tag on the page */
+            div {
+                background-color: fuchsia;
+                /* font-family: fantasy; */
+            }
+
+            /* 1rem = 16px */
+            p {
+                margin-top: 1rem;
+                border: 1px solid red;
+                padding: 2rem 1rem;
+                border-width: 1px 5px 10px 2px;
+                color: #17c665;
+                /* font-family: Helvetica, Arial, sans-serif; */
+            }
+            
+            a {
+                color: #000;
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+            /* This is a pseduo element selector, this is more specific than a tag, this one applies to only links that you have visited by your browser */
+            a:visited {
+                color: rgb(255, 0, 162);
+            }
+
+            /* a class selector always starts with a . inside our style sheet */
+            .silly_text {
+                font-family: cursive;
+                text-decoration: wavy underline;
+                color: cornflowerblue;
+            }
+
+            /*  */
+            #really_important {
+                font-weight: 600;
+                font-size: x-large;
+                font-style: oblique;
+                line-height: 50px;
+                text-transform: lowercase;
+            }
+         </style>
+    </head>
+
+    <body>
+        <div class="silly_text">Testing 123</div>
+        <p>a pag tag just to add <a href="#" class="silly_text"> some spacing </a> and to show margin and padding</p>
+        <div>Another div</div>
+        <p id="really_important">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <span style="color:purple"> It has survived not only five centuries, but also the leap into electronic typesetting, </span> remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+    </body>
+</html>
