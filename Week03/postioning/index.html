@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Positioning</title>
+    <style type="text/css">
+        div {
+            min-height: 100px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .fixed {
+            position: fixed;
+        }
+
+        .top {
+            top: 0;
+        }
+
+        .bottom {
+            bottom: 0;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            right: 0;
+        }
+
+        .top-50 {
+            top: 50px;
+        }
+
+        .right-50 {
+            right: 50px;
+        }
+
+        .left-50 {
+            left: 50px;
+        }
+
+        .bottom-50 {
+            bottom: 50px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="red relative top-50">Relative</div>
+    <div class="green absolute top-50">Absolute positioned divs look for a parent element with a defined position property to position against. If it can't find one, it positions absolutely to the body tag</div>
+    <div class="yellow fixed top-50">Fixed behaves similary to absolute but will be fixed regardless of scrolling</div>
+<div class="blue relative" style="width: 500px; height: 500px;">
+    <p>When we have a relative parent, absolute or fixed position child element will position in relation to the relatively positioned parent.</p>
+    <div class="red absolute top-50 right-50">absolute position relative parent</div>
+    <div class="green fixed bottom-50 left-50">fixed position relative parent</div>
+</div>
+
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat ornare metus, at tincidunt eros eleifend ac. Ut sit amet dignissim orci, id facilisis libero. Pellentesque vehicula interdum augue, nec ullamcorper dui imperdiet in. Aenean augue est, auctor vitae diam ac, cursus accumsan felis. Pellentesque tincidunt lorem in mollis fermentum. Cras id lacus sit amet diam hendrerit mattis. Ut nisl risus, lacinia in ullamcorper id, lacinia a purus.
+    </p>
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat ornare metus, at tincidunt eros eleifend ac. Ut sit amet dignissim orci, id facilisis libero. Pellentesque vehicula interdum augue, nec ullamcorper dui imperdiet in. Aenean augue est, auctor vitae diam ac, cursus accumsan felis. Pellentesque tincidunt lorem in mollis fermentum. Cras id lacus sit amet diam hendrerit mattis. Ut nisl risus, lacinia in ullamcorper id, lacinia a purus.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat ornare metus, at tincidunt eros eleifend ac. Ut sit amet dignissim orci, id facilisis libero. Pellentesque vehicula interdum augue, nec ullamcorper dui imperdiet in. Aenean augue est, auctor vitae diam ac, cursus accumsan felis. Pellentesque tincidunt lorem in mollis fermentum. Cras id lacus sit amet diam hendrerit mattis. Ut nisl risus, lacinia in ullamcorper id, lacinia a purus.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat ornare metus, at tincidunt eros eleifend ac. Ut sit amet dignissim orci, id facilisis libero. Pellentesque vehicula interdum augue, nec ullamcorper dui imperdiet in. Aenean augue est, auctor vitae diam ac, cursus accumsan felis. Pellentesque tincidunt lorem in mollis fermentum. Cras id lacus sit amet diam hendrerit mattis. Ut nisl risus, lacinia in ullamcorper id, lacinia a purus.
+        </p>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat ornare metus, at tincidunt eros eleifend ac. Ut sit amet dignissim orci, id facilisis libero. Pellentesque vehicula interdum augue, nec ullamcorper dui imperdiet in. Aenean augue est, auctor vitae diam ac, cursus accumsan felis. Pellentesque tincidunt lorem in mollis fermentum. Cras id lacus sit amet diam hendrerit mattis. Ut nisl risus, lacinia in ullamcorper id, lacinia a purus.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat ornare metus, at tincidunt eros eleifend ac. Ut sit amet dignissim orci, id facilisis libero. Pellentesque vehicula interdum augue, nec ullamcorper dui imperdiet in. Aenean augue est, auctor vitae diam ac, cursus accumsan felis. Pellentesque tincidunt lorem in mollis fermentum. Cras id lacus sit amet diam hendrerit mattis. Ut nisl risus, lacinia in ullamcorper id, lacinia a purus.
+        </p>
+  </body>
+</html>

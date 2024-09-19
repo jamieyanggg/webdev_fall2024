@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS navbar dropdown</title>
+    <style type="text/css">
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding: 20px;
+            font-size: 16px;
+            text-align: center;
+            background-color: rgba(0,0,0,0.1);
+        }
+
+        ul {
+            display: inline;
+            margin: 0;
+            padding: 15px 4px 17px 0px;
+            list-style-type: none;
+            box-shadow: 10px 5px 5px black;
+        }
+
+        ul li {
+            /* you will never do this in production but it is valid */
+            font: bold 12px/18px Cambria;
+            display: inline-block;
+            position: relative;
+            padding: 15px 20px;
+            background-color: #fff;
+            cursor: pointer;
+            /* transition is always applied to the base style state
+            when we use the keyword all, any css properties will animate from one to the other */
+            transition: all 0.9s;
+        }
+
+        ul li:hover {
+            background-color: #555;
+            color: #fff;
+        }
+        /* this patterns targets the nested UL */
+        ul li ul {
+            padding: 0;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 150px;
+            box-shadow: none;
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+        }
+    </style>
+  </head>
+  <body>
+    <ul>
+        <li>Link 1</li>
+        <li>Link 2</li>
+        <li>Link 3
+            <ul>
+                <li>Sublink 1</li>
+                <li>Sublink 2</li>
+                <li>Sublink 3</li>
+            </ul>
+        </li>
+        <li>Link 4</li>
+        <li>Link 5</li>
+    </ul>
+  </body>
+</html>
