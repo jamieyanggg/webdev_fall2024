@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+/* font-family: "Kaushan Script", cursive; */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* this is how we get a full sized fixed centered background */
+  background: url('../img/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* apply default font style at the body
+tag and all children elements will inherit
+it unless we override it with another style
+ further down */
+body {
+  font-family: 'Kaushan Script', cursive;
+}
+
+/* NAVIGATION */
+header {
+    width: 80%;
+    padding: 0 10%;
+    height: 50px;
+    overflow-y: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-bottom: 10px;
+    /* increase z index to pull items fowards aka bring to front
+        decrease z index to pull items back aka send to back*/
+    z-index: 10;
+    background-color: gray;
+    /* flexbox properties */
+    /* displaying flex means flexbox container property */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../img/double-bubble-dark.png);
+}
+
+header h1 {
+    color: #ccc;
+
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+    background-color: rgba(140, 140, 140, 0.1);
+}
+
+nav li {
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    width: 120px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ccc;
+    display: block;
+    /* we always define our transtions on the intial  style*/
+    transition: all 1s;
+}
+
+nav a:hover {
+    /* these properties will animate because of the transition above*/
+    background-color: #eee;
+    color: black;
+}
+
+nav a.active {
+    background-color: white;
+    color: red;
+
+}
+
+/* GALLERY */
+.container {
+  width: 900px;
+  margin: 100px auto;
+  /* when we use inline block
+  to stack things we have to zero out
+  the font size on the container element */
+  font-size: 0;
+}
+
+.polaroid {
+  width: 260px;
+  margin: 20px;
+  display: inline-block;
+  /* WHENEVER YOU WANT A CHILD ELEMENT TO
+  POSITION WITHIN A PARENT ELEMENT, YOU HAVE
+  TO RELATIVE POSITION THE PARENT*/
+  position: relative;
+}
+/*  whenever you style an image, its usually best practice to 
+make the image take up 100% of its parent element and 
+then give the parent a width and height */
+.polaroid img {
+  width: 100%;
+  height: auto;
+  /* border shorthand is 1- width, style, color */
+  border: 10px solid #ccc;
+  border-bottom-width: 45px;
+}
+
+.polaroid p {
+  font-size: 1rem;
+  position: absolute;
+  bottom: 14px;
+  width: 280px;
+  text-align: center;
+  color: #333;
+}
+
+/* TRANSFORMS */
+.scale_up {
+    transform: scale(1.5);
+    z-index: 10;
+}
+
+.scale_x {
+    /* transform: scaleX(2); */
+    z-index: 10;
+    transform: scale(2,1); 
+}
+
+.scale_y {
+    transform: scale(1,2);
+}
+
+.skew_x {
+    transform: skewX(-20deg);
+}
+
+.skew_y {
+    transform: skewY(-20deg);
+}
+
+.skew_both {
+    transform: skew(10deg, 30deg);
+}
+
+.rot_x {
+    transform: rotateX(180deg);
+}
+
+.rot_y {
+    transform: rotateY(180deg);
+}
+
+.rot_z {
+    transform: rotateZ(120deg);
+}
+
+.rotate_left {
+    transform: rotate(-20deg);
+    transition: all 5s ease-in-out;
+}
+
+.rotate_left:hover {
+    transform: rotate(20deg);
+    cursor: pointer;
+}
+
+.skew_hover {
+    transform: skewX(-30deg);
+    transition: all 5s ease;
+}
+
+.skew_hover:hover {
+    transform: skewX(30deg);
+    cursor: pointer;
+}
+
+.scale_hover {
+    transform: scale(0.5);
+    transition: all 5s ease-in;
+}
+
+.scale_hover:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.color_swap {
+    filter: grayscale(100%);
+    transition: all 2s ease-out;
+}
+
+.color_swap:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+}

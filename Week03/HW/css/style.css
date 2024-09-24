@@ -39,7 +39,6 @@ header button {
     color: #d57d3d; 
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 header button:hover {
