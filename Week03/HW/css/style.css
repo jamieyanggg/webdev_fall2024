@@ -21,7 +21,6 @@ header {
     background-color: #d57d3d;
     color: white;
     margin-bottom: 20px;
-    border-radius: 10px;
 }
 
 header h1 {
@@ -39,7 +38,6 @@ header button {
     background-color: #fff;
     color: #d57d3d; 
     border: none;
-    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -52,7 +50,6 @@ header button:hover {
 nav {
     background-color: #9a5b3d; 
     margin-bottom: 20px;
-    border-radius: 10px; /* Rounded corners */
     padding: 10px 0;
 }
 
@@ -76,7 +73,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+    background-color: rgba(255, 255, 255, 0.2); 
 }
 
 nav ul li:hover ul {
@@ -88,9 +85,9 @@ nav ul li ul {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #7a4e3a; /* Darker brown for dropdown */
+    background-color: #7a4e3a; 
     padding: 10px 0;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px; 
 }
 
 nav ul li ul li a {
@@ -104,15 +101,14 @@ main {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
-    background: #fff; /* White background for content */
-    border-radius: 10px;
+    background: #fff; 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Content Wrapper */
 .content-wrapper {
-    flex: 1; /* Take remaining space */
-    padding-right: 20px; /* Space between content and sidebar */
+    flex: 1; 
+    padding-right: 20px; 
 }
 
 figure {
@@ -123,7 +119,6 @@ figure {
 figure img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
 }
 
 .description p {
@@ -132,88 +127,79 @@ figure img {
 
 /* Sidebar Styling */
 .sidebar {
-    background-color: #fae4d3; /* Light orange background for notes */
+    background-color: #fae4d3; 
     padding: 15px;
-    border-radius: 10px;
-    width: 250px; /* Fixed width for sidebar */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 250px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar h2 {
-    text-align: center; /* Center the heading */
-    color: #9a5b3d; /* Matching color to the nav bar */
+    text-align: center; 
+    color: #9a5b3d; 
 }
 
 .sidebar ul {
     list-style-type: none;
     padding: 0;
-    margin: 10px 0; /* Margin around the list */
+    margin: 10px 0; 
 }
 
 .sidebar ul li {
-    background: #fff; /* White background for individual notes */
+    background: #fff; 
     padding: 10px;
     margin: 5px 0;
-    border-radius: 5px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); 
 }
 
 /* Ingredients Section Styling */
 .ingredients {
-    background-color: #ffebcc; /* Light peach background */
+    background-color: #ffebcc; 
     padding: 15px;
-    border-radius: 10px;
-    margin: 20px 0; /* Spacing around the section */
+    margin: 20px 0; 
 }
 
 .ingredients h2 {
     text-align: center;
-    color: #9a5b3d; /* Matching color to the nav bar */
+    color: #9a5b3d; 
 }
 
 .ingredients ul {
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
+    list-style-type: none; 
+    padding: 0; 
 }
 
 .ingredients ul li {
-    background: #fff; /* White background for ingredients */
+    background: #fff; 
     padding: 10px;
-    margin: 5px 0; /* Margin between items */
-    border-radius: 5px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 5px 0; 
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); 
 }
 
 /* Instructions Section Styling */
 .instructions {
-    background-color: #fff3e6; /* Soft cream background for fall */
+    background-color: #fff3e6; 
     padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0; /* Spacing around the section */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    margin: 20px 0; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .instructions h2 {
     text-align: center;
-    color: #8B4513; /* SaddleBrown color for header */
-    font-family: 'Georgia', serif; /* Elegant font for the heading */
-    margin-bottom: 15px; /* Space below heading */
+    color: #8B4513;
+    font-family: 'Georgia', serif; 
+    margin-bottom: 15px; 
 }
 
 .instructions ol {
-    padding-left: 20px; /* Indent for ordered list */
+    padding-left: 20px; 
 }
 
 .instructions ol li {
-    background: #ffe6cc; /* Light orange background for steps */
+    background: #ffe6cc; 
     padding: 15px;
-    margin: 10px 0; /* Margin between items */
-    border-left: 5px solid #D2691E; /* Chocolate color left border for emphasis */
-    border-radius: 5px;
+    margin: 10px 0; 
+    border-left: 5px solid #D2691E; 
 }
-
-
-
 
 
 /* Footer Styling */
