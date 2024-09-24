@@ -1,133 +1,107 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css" />
     <title>Pumpkin Bread Recipe</title>
-  </head>
-  <body>
+</head>
+<body>
 
-    <!-- start of nav bar -->
+    <!-- Header Section -->
+    <header>
+        <h1>The Best Pumpkin Bread Recipe</h1>
+        <div class="buttons">
+            <button>Jump to Recipe</button>
+            <button>Print Recipe</button>
+            <button>Share Recipe</button>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">More Recipes</a>
-                <!-- sublinks -->
+            <li>
+                <a href="#">More Recipes</a>
                 <ul>
                     <li><a href="#">Cookies</a></li>
                     <li><a href="#">Cake</a></li>
                     <li><a href="#">Bread</a></li>
                     <li><a href="#">Pies</a></li>
                 </ul>
-                <!-- end of sublinks -->
             </li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">About</a></li>
         </ul>
     </nav>
-    <!-- end of nav bar -->
 
-    <!-- recipe name with jump to recipe button -->
-    <h1>The Best Pumpin Bread Recipe</h1>
-    <button>Jump to Recipe</button>
-    <button>Print Recipe</button>
-    <button>Share Recipe</button>
+    <!-- Main Content -->
+    <main>
+        <div class="content-wrapper">
+            <figure>
+                <img src="img/pumpkin_bread1.jpg" alt="pumpkin bread">
+                <figcaption>Pumpkin Bread</figcaption>
+            </figure>
 
-    <!-- img in a figure -->
-    <figure>
-        <img src="img/pumpkin_bread1.jpg" alt="pumpkin bread 1">
-        <figcaption>pumpkin bread 1</figcaption>
-    </figure>
-    <!-- end of figure -->
-     <!-- section with p tag with description -->
-    <section>
-        <p>
-            Homemade pumpkin bread is a favorite fall recipe packed with cinnamon spice and tons of pumpkin flavor. Extra moist and easy to make, this recipe has been a fan favorite for years. You don’t even need a mixer! The days of bland pumpkin bread are behind us.
-        </p>
-    </section>
-    <!-- end of section -->
+            <section class="description">
+                <p>Homemade pumpkin bread is a favorite fall recipe packed with cinnamon spice and tons of pumpkin flavor. Extra moist and easy to make, this recipe has been a fan favorite for years. You don’t even need a mixer! The days of bland pumpkin bread are behind us.</p>
+            </section>
 
-    <!-- side nav with dummy links to different recipes in a div -->
-    <div>
-        <h2>More Recipes:</h2>
-            <nav>
-                <ul>
-                    <li> <a href="#">Recipe 1</a></li>
-                    <li> <a href="#">Recipe 2</a></li>
-                    <li> <a href="#">Recipe 3</a></li>
-                    <li> <a href="#">Recipe 4</a></li>
-                </ul>
-            </nav>
+            <!-- div: ingredients -->
+<div class="ingredients">
+    <h2>Ingredients That You'll Need:</h2>
+    <ul>
+        <li>All Purpose Flour</li>
+        <li>Baking Soda</li>
+        <li>Cinnamon</li>
+        <li>Nutmeg</li>
+        <li>Salt</li>
+        <li>Eggs</li>
+        <li>Granulated Sugar</li>
+        <li>Brown Sugar (<em>brown or light</em>)</li>
+        <li>Pumpkin Puree (<em>canned or fresh!</em>)</li>
+        <li>Any Cooking Oil</li>
+        <li>Chocolate Chips</li>
+    </ul>
+</div>
+<!-- end of div: ingredients -->
+
+<!-- Instructions Section -->
+<div class="instructions">
+    <h2>How to Make <em>Pumpkin Bread</em>:</h2>
+    <ol>
+        <li>Adjust the oven rack to the lower third position and preheat the oven to 350°F (177°C). Lowering the oven rack prevents the top of your bread from browning too much, too soon. Grease a metal 9×5-inch loaf pan with non-stick spray. Set aside.</li>
+        <li>In a large bowl, whisk the flour, baking soda, cinnamon, nutmeg, cloves, ginger, and salt together until combined. Set aside. In a medium bowl, whisk the eggs, granulated sugar, and brown sugar together until combined. Whisk in the pumpkin, oil, and orange juice. Pour these wet ingredients into the dry ingredients and gently mix together using a rubber spatula or a wooden spoon. There will be a few lumps. Do not over-mix. Gently fold in the chocolate chips, if including.</li>
+        <li>Pour the batter into the prepared loaf pan. Bake for 60–65 minutes, making sure to loosely cover the bread with aluminum foil halfway through to prevent the top from getting too brown. The bread is done when a toothpick inserted in the center comes out clean with only a few small moist crumbs. This may be before or after 60–65 minutes depending on your oven, so begin checking every 5 minutes around the 55-minute mark.</li>
+        <li>Allow the bread to cool completely in the pan on a wire rack before removing and slicing.</li>
+        <li>Cover and store leftover pumpkin bread at room temperature for up to 3–4 days, or in the refrigerator for up to a week.</li>
+    </ol>
+</div>
+<!-- end of instructions -->
+
+            <figure>
+                <img src="img/pumpkin_bread2.jpg" alt="pumpkin bread">
+                <figcaption>Pumpkin Bread</figcaption>
+            </figure>
         </div>
-     <!-- end of div -->
 
-    <!-- aside section for recipe card -->
-    <div>
-        <h2>Notes</h2>
-        <ul>
-            <li>Make Ahead Tip: Baked pumpkin bread can be frozen for up to 3 months. Thaw overnight in the refrigerator and bring to room temperature before serving.</li>
-            <li>Spices: You can use 1 teaspoon store-bought or homemade pumpkin pie spice instead of nutmeg, cloves, and ginger. Be sure to still add 2 teaspoons of cinnamon to the batter.</li>
-            <li>Oil: Oil is a better choice than melted butter in this recipe. The bread is not as moist and soft if using butter.</li>
-            <li>Orange Juice: You can substitute milk (any kind) for orange juice.</li>
-            <li>Chocolate Chips: If desired, try using milk chocolate, white chocolate, dark chocolate, or even chopped pecans/walnuts instead of the semi-sweet chocolate chips. You can leave the pumpkin bread plain, too.</li>
-        </ul>
-    </div>
-        <figure>
-            <img src="img/pumpkin_bread3.jpg" alt="pasta img 2"/>
-        </figure>
-        <figcaption>penne alla vokda 2</figcaption>
-        </figure>
+        <!-- Sidebar with Notes -->
+        <aside class="sidebar">
+            <h2>Notes</h2>
+            <ul>
+                <li>Make Ahead Tip: Baked pumpkin bread can be frozen for up to 3 months.</li>
+                <li>Spices: You can use store-bought pumpkin pie spice instead of individual spices.</li>
+                <li>Oil: Oil is a better choice than melted butter in this recipe.</li>
+                <li>Orange Juice: Substitute milk for orange juice.</li>
+                <li>Chocolate Chips: Try using different types of chocolate or nuts.</li>
+            </ul>
+        </aside>
+    </main>
 
-    <!-- div: ingredients -->
-    <h2>Ingredients That You'll Need: </h2>
-    <div>
-      <ul>
-          <li>Penne</li>
-          <li>Tomato Paste</li>
-          <li>Vodka (<em>optional if under 21</em>)</li>
-          <li>Olive Oil</li>
-          <li>Butter</li>
-          <li>Onion</li>
-          <li>Garlic</li>
-          <li>Heavy Cream</li>
-          <li>Parmesan (<em>any cheese works!</em>)</li>
-      </ul>
-    </div>
-    <!-- end of div: ingredients -->
-
-    <!-- figure with img of ingredients -->
-     <figure>
-        <img src="" alt="ingredients"/>
-        <figcaption>ingredients</figcaption>
-    </figure>
-    <!-- end of figure -->
-
-    <h2>How to make <em>Penne Alla Pasta</em>:</h2>
-    <!-- div for instructions -->
-    <div>
-        <ol>
-            <li>Boil a salted pot of water for the penne and cook it <em>al dente</em> according to package directions.</li>
-            <li>While the penne is cooking, add the oil and butter to a skillet over medium heat. Sauté the onion for about 5 minutes or until softened.</li>
-            <li>Stir in the garlic and cook for about 30 seconds.</li>
-            <li>Add the vodka and let the sauce bubble for 30 seconds to a minute.</li>
-            <li>Stir in the tomato paste until smooth.</li>
-            <li>Stir in the cream, and reduce heat to medium-low. Let the sauce warm through until the thickness is to your liking.</li>
-            <li>Season with salt & pepper as needed. Stir in the fresh basil if using. Toss with the drained <br>pasta (if needed, thin the sauce out a bit with a splash of hot pasta water prior to draining it).</li>
-            <li>Serve with freshly grated parmesan cheese if desired. Then, enjoy!</li>
-        </ol>
-    </div>
-        <!-- end of div for instructions -->
-
-    <!-- figure with dummy img for now -->
-    <figure>
-        <img src="img/pumpkin_bread2.jpg" alt="pumpkin bread 2"/>
-        <figcaption>pumpkin bread 2</figcaption>
-    </figure>
-<hr/>
-
-    <!-- footer -->
-     <footer>
-        &copy;2024-2025 Jamie's Baking Addiction, All Rights Reserved.
-     </footer>
-  </body>
+    <!-- Footer -->
+    <footer>
+        &copy;2024 Jamie's Baking, All Rights Reserved.
+    </footer>
+</body>
 </html>

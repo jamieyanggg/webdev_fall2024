@@ -1,0 +1,227 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5dc; 
+    color: #4a4a4a; 
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #d57d3d;
+    color: white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header .buttons {
+    margin-top: 10px;
+}
+
+header button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #d57d3d; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Navigation Styling */
+nav {
+    background-color: #9a5b3d; 
+    margin-bottom: 20px;
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0; 
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px; 
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #7a4e3a; /* Darker brown for dropdown */
+    padding: 10px 0;
+    border-radius: 5px; /* Rounded corners */
+}
+
+nav ul li ul li a {
+    padding: 10px 20px;
+}
+
+/* Main Content Styling */
+main {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: #fff; /* White background for content */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    flex: 1; /* Take remaining space */
+    padding-right: 20px; /* Space between content and sidebar */
+}
+
+figure {
+    text-align: center;
+    margin: 20px 0;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.description p {
+    margin: 20px 0;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #fae4d3; /* Light orange background for notes */
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px; /* Fixed width for sidebar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.sidebar h2 {
+    text-align: center; /* Center the heading */
+    color: #9a5b3d; /* Matching color to the nav bar */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0; /* Margin around the list */
+}
+
+.sidebar ul li {
+    background: #fff; /* White background for individual notes */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Ingredients Section Styling */
+.ingredients {
+    background-color: #ffebcc; /* Light peach background */
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0; /* Spacing around the section */
+}
+
+.ingredients h2 {
+    text-align: center;
+    color: #9a5b3d; /* Matching color to the nav bar */
+}
+
+.ingredients ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+}
+
+.ingredients ul li {
+    background: #fff; /* White background for ingredients */
+    padding: 10px;
+    margin: 5px 0; /* Margin between items */
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Instructions Section Styling */
+.instructions {
+    background-color: #fff3e6; /* Soft cream background for fall */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0; /* Spacing around the section */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.instructions h2 {
+    text-align: center;
+    color: #8B4513; /* SaddleBrown color for header */
+    font-family: 'Georgia', serif; /* Elegant font for the heading */
+    margin-bottom: 15px; /* Space below heading */
+}
+
+.instructions ol {
+    padding-left: 20px; /* Indent for ordered list */
+}
+
+.instructions ol li {
+    background: #ffe6cc; /* Light orange background for steps */
+    padding: 15px;
+    margin: 10px 0; /* Margin between items */
+    border-left: 5px solid #D2691E; /* Chocolate color left border for emphasis */
+    border-radius: 5px;
+}
+
+
+
+
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4a4a4a; 
+    color: white;
+    position: relative;
+    margin-top: 20px;
+}
