@@ -1,0 +1,99 @@
+/* Global Styles */
+* {
+    /* THIS INCLUDES PADDING AND BORDER WIDTHS IN TOTAL WIDTH */
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Flexbox simple row layout */
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* some styles so we can see the containers */
+    border: 1px solid purple;
+    background-color: rgba(255,0,255,0.3);
+    min-height: 400px;
+    width: 100%;
+}
+
+.item {
+    border: 1px solid cornflowerblue;
+    background-color: rgba(0,0,255,0.3);
+    width: 23%;
+    height: 300px;
+}
+
+.center {
+    display: flex;
+    /* horizontal - left and right - alignment */
+    justify-content: center; 
+    /* vertitcal - up and down - alignement  */
+    align-items: center;
+    /* in combination makes it centered everywhere */
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-even {
+    justify-content: space-evenly;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.self-start {
+    align-self: flex-start;
+}
+
+.self-end {
+    align-self: flex-end;
+}
+
+.self-stretch {
+    align-self: stretch;
+}
+
+@media screen and (max-width: 768px){
+    .container {
+        flex-direction: column;
+    }
+
+    .self-stretch {
+        height: 300px;
+        /* self-stretch, or any stretch flex property will not override any  */
+        width: auto;
+    }
+}
