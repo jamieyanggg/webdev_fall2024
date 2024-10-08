@@ -1,0 +1,165 @@
+/* Global Styles and Resets Always */
+
+/* Take into account the borders and padding when setting dimensions of our boxes */
+* {
+    box-sizing: border-box;
+}
+
+/* Zero out the margin on the page */
+html, 
+body {
+    margin: 0;
+}
+
+/* Scale images to fit their parent container */
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Desktop first styling --> default styles are for large screens and our media queries gets progressively smaller */
+
+/* Jumbotron Styles */
+div.hero {
+    width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.hero article{
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    width: 50%;
+    padding: 2%;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 0.5) 0%, 
+        rgba(255, 0, 0, 0.1) 100%
+        );
+}
+
+button, 
+a.info {
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #333;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 1s linear;
+}
+
+button:hover, 
+a.info:hover {
+    /* Change properties here on hover */
+    color: chartreuse;
+    background-color: #111;
+}
+
+/* Portfolio Thumbnails */
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.thumbnail {
+    position: relative;
+    /* flex-grow: 0; */
+    /* flex-shrink: 0; */
+    /* flex-basis: 30%; */
+    /* flex: 0 0 30%; */
+    width: 30%;
+    overflow: hidden;
+    margin: 1.5rem auto;
+}
+
+/* Preparing our initial state for image transforms */
+.thumbnail img {
+    transform: scale(1);
+    transform: rotate(0deg);
+    transition: all 1s ease;
+}
+
+.thumbnail:hover img {
+    transform: scale(1.5) rotate(-20deg);
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background-color: rgba(255,255,255,0.5);
+    transition: all 1s ease-in-out;
+}
+
+.mask h2 {
+    margin: 0;
+}
+
+.mask p {
+    font-style: italic;
+}
+
+.thumbnail:hover .mask {
+    opacity: 1;
+}
+
+.thumbnail .mask h2,
+.thumbnail .mask p,
+.thumbnail .mask a {
+    opacity: 0;
+    transform: scale(0);
+    transition: all 1s ease-out;
+}
+
+.thumbnail:hover .mask h2,
+.thumbnail:hover .mask p,
+.thumbnail:hover .mask a {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Media Qeueries */
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .hero article {
+        width: 75%;
+    }
+
+    .thumbnail {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        padding: 0.75rem;
+    }
+
+    .hero article {
+        width: 100%;
+        padding: 1rem;
+        bottom: 0;
+    }
+
+    .thumbnail {
+        width: 100%;
+    }
+}
