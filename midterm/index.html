@@ -1,58 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jamie's Portfolio</title>
+<head>
+    <title> Jamie's Portfolio </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/style.css">
-  </head>
-  <body>
+</head>
+<body>
 
-    <!-- Page Loader Start -->
-    <div class="page-loader">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-<!-- Page Loader End -->
+    <!--Header Start -->
+    <header class="header">
+        <div class="container">
+            <div class="row flex-end">
+                <button type="button" class="nav-toggler">
+                    <span></span>
+                </button>
+                <nav class="nav">
+                    <div class="nav-inner">
+                        <ul>
+                            <li><a href="#home" class="nav-item link-item">Home</a></li>
+                            <li><a href="#about" class="nav-item link-item">About</a></li>
+                            <li><a href="#portfolio" class="nav-item link-item">Portfolio</a></li>
+                            <li><a href="#contact" class="nav-item link-item">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+    </header>
+    <!--Header End -->
 
-<!-- Header Start -->
-
- <!-- Nav Bar Start -->
-    <nav>
-        <h1 class="logo"><a href="index.html">Jamie Yang</a></h1>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects/index.html">Projects</a></li>
-                <li><a href="about/index.html">About</a></li>
-                <li><a href="contact/index.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hamburger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-        </div>
-    </nav>
-
-<!-- Header End -->
-
-<!-- Main Page Start -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Hi! I'm Jamie Yang</h1>
-            <h2>A Student at NYU</h2>
-            <h3>Integrated Design & Media</h3>
-        </div>
-        <div class="scroll-down">
-            <p>Scroll Down</p>
-            <img src="" alt="butterfly icon">
+    <!--Home Section Start -->
+    <section class="home-section align-items-center" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                    <div class="home-text">
+                    <h1>Hi! I'm Jamie Yang</h1>
+                    <h2>A student at NYU Tandon SOE
+                        <br> Integrated Design and Media<br>
+                    </h2>
+                    </div>
+            </div>
         </div>
     </section>
-<!-- Main Page End -->
+    <!--Home Section End -->
 
+    <!--About Section Start -->
+    <section class="about-section sec-padding" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>About Me</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="about-img">
+                    <div class="img-box">
+                        <img src="images/about-me.png" alt="about img">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>I am currently a Sophmore at New York University, Tandon School of Engineering, in New York. I am expected to graduate in 2027 with a Integrated Design and Media Bachelor of Science degree.... </p>
+                    <h3>Skills</h3>
+                    <div class="skills">
+                        <div class="skill-item">HTML</div>
+                        <div class="skill-item">CSS</div>
+                        <div class="skill-item">Photoshop</div>
+                        <div class="skill-item">Figma</div>
+                        <div class="skill-item">InDesign</div>
+                        <div class="skill-item">P5.JS</div>
+                        <div class="skill-item">Illustrator</div>
+                    </div>
+
+                    <div class="about-tabs">
+                        <button type="button" class="tab-item active" data-target="#Education">Education</button>
+                        <button type="button" class="tab-item" data-target="#Experience">Experience</button>
+                    </div>
+                    <!--Education Start -->
+                    <div class="tab-content " id="education">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="date">2019 - 2023</span>
+                                <h4>Graduate - <span>Stearn Jr.Sr High School</span></h4>
+                                <p>• GPA 4.0 <br>
+                                    • Ranked second in class <br>
+                                    • Academic High Honor Roll each quarter, 2019-2022 <br>
+                                    • Class Treasurer Class of 2023, 2022-2023</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">2023 - 2027</span>
+                                <h4>Bachelor of Integrated Media Design - <span>New York University - Tandon, School of Engineering</span></h4>
+                                <p>• GPA 4.0 <br>
+                                    • Ranked second in class <br>
+                                    • Academic High Honor Roll each quarter, 2019-2022 <br>
+                                    • Class Treasurer Class of 2023, 2022-2023</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Education End -->
+
+                    <!--Experience Start -->
+                    <div class="tab-content active" id="experience">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="date">#### - ####</span>
+                                <h4>Web Developer - <span>To Be Determined</span></h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">#### - ####</span>
+                                <h4>Web Developer - <span>To Be Determined</span></h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">#### - ####</span>
+                                <h4>Web Developer - <span>To Be Determined</span></h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">#### - ####</span>
+                                <h4>Web Developer - <span>To Be Determined</span></h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">#### - ####</span>
+                                <h4>Web Developer - <span>To Be Determined</span></h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Experience End -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--About Section End -->
+
+    <!--Portfolio Section Start -->
+    <section class="portfolio-section sec-padding" id="portfolio" >
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>Projects</h2>
+                </div>
+            </div>
+            <div class="row">
+                <!--Portfolio Item Start -->
+                <div class="portfolio-item">
+                    <div class="portfolio-item-thumbnail">
+                        <img src="images/idm-1.jpeg" alt="portfolio item thumbnail">
+                    </div>
+                    <h3 class="portfolio-item-title">IDM PROJECT 1</h3>
+                    <button type="button" class="btn view-project-btn">View Projects</button>
+                    <div class="portfolio-item-details">
+                        <div class="description">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                        <div class="general-info">
+                            <ul>
+                                <li>Created - <span>DD MM YYYY</span></li>
+                                <li>Technologies Used - <span>HTML, CSS</span></li>
+                                <li>Role - <span>Frontend</span></li>
+                                <li>View Online - <span><a href="#" target="_blank">link</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--Portfolio Item End -->
+
+                <!--Portfolio Item Start -->
+                <div class="portfolio-item">
+                    <div class="portfolio-item-thumbnail">
+                        <img src="images/IDM2.jpeg" alt="portfolio item thumbnail">
+                    </div>
+                    <h3 class="portfolio-item-title">Personal Portfolio</h3>
+                    <button type="button" class="btn view-project-btn">View Projects</button>
+                    <div class="portfolio-item-details">
+                        <div class="description">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                        <div class="general-info">
+                            <ul>
+                                <li>Created - <span>DD MM YYYY</span></li>
+                                <li>Technologies Used - <span>HTML, CSS</span></li>
+                                <li>Role - <span>Frontend</span></li>
+                                <li>View Online - <span><a href="#" target="_blank">link</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--Portfolio Item End -->
+
+                <!--Portfolio Item Start -->
+                <div class="portfolio-item">
+                    <div class="portfolio-item-thumbnail">
+                        <img src="images/idm-3.jpeg" alt="portfolio item thumbnail">
+                    </div>
+                    <h3 class="portfolio-item-title">IDM PROJECT 3</h3>
+                    <button type="button" class="btn view-project-btn">View Projects</button>
+                    <div class="portfolio-item-details">
+                        <div class="description">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                        <div class="general-info">
+                            <ul>
+                                <li>Created - <span>DD MM YYYY</span></li>
+                                <li>Technologies Used - <span>HTML, CSS</span></li>
+                                <li>Role - <span>Frontend</span></li>
+                                <li>View Online - <span><a href="#" target="_blank">link</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--Portfolio Item End -->
+
+                <!--Portfolio Item Start -->
+                <div class="portfolio-item">
+                    <div class="portfolio-item-thumbnail">
+                        <img src="images/idm-1.jpeg" alt="portfolio item thumbnail">
+                    </div>
+                    <h3 class="portfolio-item-title">IDM PROJECT 1</h3>
+                    <button type="button" class="btn view-project-btn">View Projects</button>
+                    <div class="portfolio-item-details">
+                        <div class="description">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                        <div class="general-info">
+                            <ul>
+                                <li>Created - <span>DD MM YYYY</span></li>
+                                <li>Technologies Used - <span>HTML, CSS</span></li>
+                                <li>Role - <span>Frontend</span></li>
+                                <li>View Online - <span><a href="#" target="_blank">link</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--Portfolio Item End -->
+
+                <!--Portfolio Item Start -->
+                <div class="portfolio-item">
+                    <div class="portfolio-item-thumbnail">
+                        <img src="images/idm-1.jpeg" alt="portfolio item thumbnail">
+                    </div>
+                    <h3 class="portfolio-item-title">IDM PROJECT 1</h3>
+                    <button type="button" class="btn view-project-btn">View Projects</button>
+                    <div class="portfolio-item-details">
+                        <div class="description">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                        <div class="general-info">
+                            <ul>
+                                <li>Created - <span>DD MM YYYY</span></li>
+                                <li>Technologies Used - <span>HTML, CSS</span></li>
+                                <li>Role - <span>Frontend</span></li>
+                                <li>View Online - <span><a href="#" target="_blank">link</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--Portfolio Item End -->
+
+                <!--Portfolio Item Start -->
+                <div class="portfolio-item">
+                    <div class="portfolio-item-thumbnail">
+                        <img src="images/idm-1.jpeg" alt="portfolio item thumbnail">
+                    </div>
+                    <h3 class="portfolio-item-title">IDM PROJECT 1</h3>
+                    <button type="button" class="btn view-project-btn">View Projects</button>
+                    <div class="portfolio-item-details">
+                        <div class="description">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                        <div class="general-info">
+                            <ul>
+                                <li>Created - <span>DD MM YYYY</span></li>
+                                <li>Technologies Used - <span>HTML, CSS</span></li>
+                                <li>Role - <span>Frontend</span></li>
+                                <li>View Online - <span><a href="#" target="_blank">link</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--Portfolio Item End -->
+            </div>
+        </div>
+    </section>
+    <!--Portfolio Section End -->
+<!--Main End -->
 
 <!-- Footer Start -->
 <footer>

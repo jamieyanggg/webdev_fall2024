@@ -1,70 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CSS navbar dropdown</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dropdown Menu Nested UL</title>
     <style type="text/css">
-        body {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            padding: 20px;
-            font-size: 16px;
-            text-align: center;
-            background-color: rgba(0,0,0,0.1);
-        }
+      body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 20px 50px 150px 50px;
+        font-size: 13px;
+        text-align: center;
+        background-color: rgba(0, 0, 255, 0.1);
+      }
 
-        ul {
-            display: inline;
-            margin: 0;
-            padding: 15px 4px 17px 0px;
-            list-style-type: none;
-            box-shadow: 10px 5px 5px black;
-        }
+      ul {
+        /* this inline is imporant! */
+        display: inline;
+        margin: 0;
+        padding: 15px 4px 17px 0;
+        list-style-type: none;
+        box-shadow: 0, 0, 5px rgba(0, 0, 0, 0.15);
+      }
 
-        ul li {
-            /* you will never do this in production but it is valid */
-            font: bold 12px/18px Cambria;
-            display: inline-block;
-            position: relative;
-            padding: 15px 20px;
-            background-color: #fff;
-            cursor: pointer;
-            /* transition is always applied to the base style state
-            when we use the keyword all, any css properties will animate from one to the other */
-            transition: all 0.9s;
-        }
+      ul li {
+        font: bold 12px/18px sans-serif;
+        display: inline-block;
+        position: relative;
+        padding: 15px 20px;
+        background: #fff;
+        cursor: pointer;
+        transition: all 0.9s;
+      }
 
-        ul li:hover {
-            background-color: #555;
-            color: #fff;
-        }
-        /* this patterns targets the nested UL */
-        ul li ul {
-            padding: 0;
-            position: absolute;
-            top: 40px;
-            left: 0;
-            width: 150px;
-            box-shadow: none;
-            display: none;
-            opacity: 0;
-            visibility: hidden;
-        }
+      ul li:hover {
+        background-color: #555;
+        color: #fff;
+      }
+
+      ul li ul {
+        padding: 0;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        width: 150px;
+        box-shadow: none;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.9s;
+      }
+
+      ul li ul li {
+        background: #555;
+        display: block;
+        color: #fff;
+        text-shadow: 0 -1px 0 #000;
+      }
+
+      ul li ul li:hover {
+        background: #666;
+      }
+
+      ul li:hover ul {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
     </style>
   </head>
   <body>
     <ul>
-        <li>Link 1</li>
-        <li>Link 2</li>
-        <li>Link 3
-            <ul>
-                <li>Sublink 1</li>
-                <li>Sublink 2</li>
-                <li>Sublink 3</li>
-            </ul>
-        </li>
-        <li>Link 4</li>
-        <li>Link 5</li>
+      <li>Home</li>
+      <li>About</li>
+      <li>
+        Portfolio
+        <ul>
+          <li>Web Design</li>
+          <li>Web Development</li>
+          <li>Photography</li>
+        </ul>
+      </li>
+      <li>Contact</li>
     </ul>
   </body>
 </html>
