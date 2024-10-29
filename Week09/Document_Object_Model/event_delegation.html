@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Delegation</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <style>
+    img {
+        display: block;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .active {
+        color: red;
+        text-shadow: 2, 2, 2, 2, rgba(0,0,0,0.4);
+    }
+  </style>
+
+  <script>
+    // globally decalre hideBtn
+    let hideBtn
+
+    // wait for the DOM content to load before executing certain lines of code
+    document.addEventListener('DOMContentLoaded', function(event){
+        // assign HTML elements to JS variables
+        hideBtn = document.getElementById('hideBtn')
+        // assign other event listeners
+        hideBtn.addEventListener('click', toggleVisible)
+
+        document.getElementById('eventH1').addEventListener('mouseover', function(event){
+            // peep the event object that got passed to this anonymous function
+            // console.log(event.target)
+            // store the element that recieved the event 
+            var element = event.target
+            element.classList.toggle('active')
+        })
+    })
+
+    function toggleVisible(){
+        var peep = document.getElementById('chicken')
+        peep.classList.toggle('hidden')
+    }
+  </script>
+</head>
+<body>
+    <h1 id="eventH1">This is here to be moused over so that we can see the event obect.</h1>
+    <button id="hideBtn">Hide</button>
+    <img src="#" alt="" id="chicken">
+
+</body>
+</html>
