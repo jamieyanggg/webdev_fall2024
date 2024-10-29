@@ -4,7 +4,7 @@ const navToggler = document.querySelector(".nav-toggler");
 navToggler.addEventListener("click", () =>{
     hideSelection();
     toggleNavbar();
-   
+    document.body.classList.toggle("hide-scrolling");
 });
 
 function hideSelection(){
@@ -12,7 +12,7 @@ function hideSelection(){
 }
 
 function toggleNavbar(){
-    document.querySelector(".header").classList.toggle('active');
+    document.querySelector(".header").classList.toggle('active'); 
 }
 
 /* Active Section */
