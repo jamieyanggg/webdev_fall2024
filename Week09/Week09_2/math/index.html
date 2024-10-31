@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JS Math Methods</title>
+    <script type="text/javascript">
+        //integers are whole numbers
+        const x = 15
+        const y = 35
+        let z 
+        z = 10.5 //float num
+ 
+        // addition (+)
+        console.log(x+y)
+
+        // subtraction (-)
+        console.log(x-y)
+
+        // multiplication (*)
+        console.log(x*y)
+
+        // division (/)
+        console.log(x/y)
+
+        // modular operator (%) returns the division remainder
+        // this is really helpful when we want to use odd or even numbers and every nth number
+        console.log(10%3)
+
+        // just like algebra, order of operations matter
+        console.log((x+y) * (y-1))
+
+        // increments
+        //(x++)
+
+        // decrements
+        // (x--)
+
+        // increment by certain number
+        // (x+= 2)
+
+        // decremnet by certain number
+        // (x-=1)
+
+        // floating point numbers and some basic math methods
+        var k = 2.25
+        // Math.floor(num), will always round down 
+        console.log('floor k result:', Math.floor(k))
+
+        // Math.ceil(num), will always round up
+        console.log('ceil k result:', Math.ceil(k))
+
+        // Math.round(num) will round up or down based on the decimal value
+        var num1 = 2.2
+        var num2 = 2.7
+        console.log('round num1 is:', Math.round(num1))
+        console.log('round num2 is:', Math.round(num2))
+
+        // Math.random() returns a floating number between 0 and 1
+        console.log(Math.random())
+
+        // we can use Math.random() in combination with Math.round(), to get the whole number 0 or 1, like T and F (bool)
+        var yn = Math.round(Math.random()) // will return 0 or 1
+        console.log(yn)
+
+        if(y === 0){
+            console.log('false')
+        }
+        else {
+            console.log('true')
+        }
+
+        // returns random number between 0 and n
+        function randNum(max){
+            // when we declare a variable inside a function, it is scoped aka not accessible outside of this function
+            var rnum = Math.round(max * Math.random())
+            // console.log(rnum)
+            return rnum
+        }
+        // this helper function is super helpful when you need to call a random index out of an array
+        var q = randNum(34)
+        console.log(q)
+
+        // test is a global variable but it gets a value assigned when we call it
+        var test 
+
+        function randNumRange(min,max){
+            var rnum = Math.round(Math.random() * (max - min) + min)
+            // test = rnum
+            return rnum
+        }
+
+        var rand1 = randNumRange(20,30)
+        var rand2 = randNumRange(55,177)
+        console.log(rand1, rand2)
+
+
+    </script>
+  </head>
+  <body></body>
+</html>

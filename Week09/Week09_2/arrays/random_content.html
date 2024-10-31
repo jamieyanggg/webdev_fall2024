@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Random Content (math + arrays)</title>
+    <script type="text/javascript">
+        // make an array of image sources to choose from at random when the page loads
+        var arrayImg = [
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hausziege_04.jpg/440px-Hausziege_04.jpg', 
+            'https://riversideparknyc.org/wp-content/uploads/2024/09/Untitled-design-31.png', 
+            'https://assets.farmsanctuary.org/content/uploads/2020/05/27054636/2018_10-23_FSNY_Racecar_goat_DSC_5147_Credit_Farm-Sanctuary-1600x1068.jpg'
+        ]
+
+        // random links to correspond to each image
+        var arrayLinks = [
+            'https://en.wikipedia.org/wiki/Goat',
+            'https://www.google.com/url?sa=i&url=https%3A%2F%2Friversideparknyc.org%2Fgoatham%2F&psig=AOvVaw1AlNI-SSHddf6dItyEdtdq&ust=1730474839066000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCNjuhaL3uIkDFQAAAAAdAAAAABAI',
+            'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.farmsanctuary.org%2Fgoats%2F&psig=AOvVaw1AlNI-SSHddf6dItyEdtdq&ust=1730474839066000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCNjuhaL3uIkDFQAAAAAdAAAAABAg'
+        ]
+
+        // helper function for picking a random number between 0 and max
+        function randIndex(max){
+            return Math.floor(Math.random() * max)
+        }
+
+        // write our own random image function outside of our event listeners
+        // remember not to call this function until DOM loads
+        function loadRandomImg(){
+            var index = randIndex(arrayImg.length)
+            var img = document.getElementById('animal')
+            var link = document.getElementById('dynLink') 
+
+            // assign the source attribute of the image element to a string stored in a random index slot in our image array
+            img.src = arrayImg[index]
+            // assign the href from our links array and random index
+            link.href = arrayLinks[index]
+        }
+
+        // loadRandomImg()
+        /*
+        // wait for the page finish loading the body content before we try and store any elements as JS variables
+        document.addEventListener('DOMContentLoaded', function(){
+            // assign elements to variables 
+            // call functions we want to run on load
+            // add event listeners to elements like buttons on our page
+            loadRandomImg()
+        })
+        */
+
+        document.addEventListener('DOMContentLoaded', loadRandomImg)
+
+    </script>
+  </head>
+  <body>
+    <a href="#" id="dynLink" target="_blank"><img scr="" id="animal" /></a>
+  </body>
+</html>
