@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Local Storage</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+</head>
+<body>
+    <h1>Hello <span id="user">World!</span></h1>
+    <form action="" id="user_info">
+        <label for="first_name">What's your name?</label>
+        <input type="text" name="first_name" id="first_name" required>
+        <button type="submit" id="name_btn">Submit!</button>
+    </form>
+    <button id="clear_btn">Clear Current User</button>
+
+    <script type="text/javascript">
+        // set user name based on form input
+        const saveUser = () => {
+            const name = document.getElementById('first_name').value
+            console.log(name)
+            localStorage.first_name = name
+        }
+
+        // a function to clear out local storage
+        const clearLocalStorage = () => {
+            // clear local storage for this url
+            localStorage.clear()
+            // after we clear the storage, we want to refresh the page so we can see what happened
+            window.location.reload()
+        }
+
+        // DOM Loaded listener to apply other event listener
+        document.addEventListener("DOMContentLoaded", ()=>{
+            document.getElementById('name_btn').addEventListener('click', (event)=> {
+                // event.preventDefault()
+                saveUser()
+            })
+            // check if the key first name exists already in local storage
+            if (localStorage.first_name) {
+                // use that value to replace 'World' span with the name value
+                document.getElementById('user').innerHTML = localStorage.first_name
+            }
+
+            const btnClear = document.getElementById('clear_btn')
+            btnClear.addEventListener('click', clearLocalStorage)
+        })
+
+
+    </script>
+</body>
+</html>
