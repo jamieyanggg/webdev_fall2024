@@ -8,6 +8,13 @@
 </head>
 <body>
 
+    <!-- Page Loader Start -->
+    <div class="page-loader">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <!-- Page Loader End -->
     <!-- Background Circles Start -->
     <div class="bg-circles">
         <div class="circle-1"></div> 
@@ -18,12 +25,11 @@
     <!-- background Circles End -->
 
     <!-- Overlay Start -->
-<div class="overlay">
-</div>
+<div class="overlay"></div>
 <!--Overlay End -->
  
 <!--Main Start -->
-<div class="main "> 
+<div class="main hidden"> 
     <!--Header Start -->
     <header class="header"> 
         <div class="container">
@@ -47,7 +53,7 @@
     <!--Header End -->
 
     <!--Home Section Start -->
-    <section class="home-section align-items-center active" id="home">
+    <section class="home-section align-items-center" id="home">
         <div class="container">
             <div class="row align-items-center">
                     <div class="home-text">
@@ -55,6 +61,8 @@
                     <h2>A student at NYU Tandon SOE
                         <br> Integrated Design and Media<br>
                     </h2>
+                    <a href="#about" class="btn link-item">More About Me</a>
+                    <a href="#portfolio" class="btn link-item">Portfolio</a>
                     </div>
             </div>
         </div>
@@ -262,15 +270,90 @@
                 <!--Portfolio Item End -->
 
                 <!-- Portfolio popup start -->
-
+                <div class="portfolio-popup">
+                <div class="pp-inner">
+                    <div class="pp-content">
+                        <div class="pp-header">
+                            <button type="button" class="btn pp-close"><i class="fas fa-times"></i></button>
+                            <div class="pp-thumbnail">
+                                <img src="images/portfolio-2" alt="pp-thumbnail">
+                            </div>
+                            <h3></h3>
+                        </div>
+                        <div class="pp-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
                 <!-- Portfolio popup end -->
-
-                <!-- contact page start -->
-                 <!-- contact page end -->
             </div>
         </div>
     </section>
     <!--Portfolio Section End -->
+
+    <!-- contact page start -->
+    <section class="contact-section sec-padding" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>Contact Me</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="contact-form">
+                    <form>
+                        <div class="row">
+                            <div class="input-group">
+                                <label>
+                                <input type="text" placeholder="Name" class="input-control" required>
+                                </label>
+                            </div>
+                            <div class="input-group">
+                                <label>
+                                    <input type="text" placeholder="Email" class="input-control" required>
+                                </label>
+                            </div>
+                            <div class="input-group">
+                                <label>
+                                    <input type="text" placeholder="Subject" class="input-control" required>
+                                </label>
+                            </div>
+                            <div class="input-group">
+                                <label>
+                                <textarea placeholder="Message" class="input-control" required></textarea>
+                                </label>
+                            </div>
+                            <div class="submit-btn">
+                                <button type="submit" class="btn">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <h3>Email</h3>
+                        <p>jy4474@nyu.edu</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <h3>Phone</h3>
+                        <p>917 - 626 - 3881</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <h3>Follow Me</h3>
+                        <div class="social-links">
+                            <a href="#" target="_blank"><i class="fab fa-pinterest"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-behance"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- contact page end -->
 <!--Main End -->
 <script src="script.js"></script>
   </body>
