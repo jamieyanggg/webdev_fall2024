@@ -397,21 +397,19 @@ button{
     visibility: visible;
 }
 
-.header .nav-inner{
-    min-height: calc(100vh - 70px);
-    max-width: 1200px;
-    margin: auto;
-    background-color: rgba(255,255,255,0.25);
-    border: 1px solid rgba(255,255,255,0.40);
-    backdrop-filter: blur(5px);
-    padding: 50px 0;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: all 0.5s ease;
+.header .nav-inner {
+    max-width: 1200px !important; /* Restore to its original max width */
+    width: 80% !important; /* Adjust to a percentage or set a fixed value */
+    height: 100%;
+    margin: auto !important; /* Center it horizontally */
+    padding: 50px 0 !important; /* Ensure padding stays intact */
+    background-color: rgba(255, 255, 255, 0.25) !important; /* Opaque background */
+    border: 1px solid rgba(255, 255, 255, 0.40) !important; /* Border */
+    backdrop-filter: blur(5px) !important; /* Blur effect */
+    border-radius: 30px !important; /* Rounded corners */
+    box-sizing: border-box !important; /* Include padding and border in the width */
 }
+
 
 .header.active .nav-inner{
     opacity: 1;
@@ -419,6 +417,7 @@ button{
 
 .header .nav-inner ul li{
     text-align: center;
+    transform: translateY(100%);
 }
 
 .header .nav-inner ul li a{
@@ -437,15 +436,16 @@ button{
     position: absolute;
     right: 0;
     bottom: 0;
-    height: 50%;
+    height: 100%;
     width: 0%;
     background-color: rgba(255,255,255,0.25);
     z-index: -1;
+    transform: translateX(-150%);
     transition: width 0.5s ease;
 }
 
 .header .nav-inner ul li a:hover::before{
-    width: 100%;
+    width: 25%;
 }
 
 .header .nav-inner ul li a:hover{
@@ -473,8 +473,30 @@ button{
     margin: 0 0 30px;
     text-align: center;
     justify-content: center;
-    
 }
+
+.home-text {
+    display: flex;
+    flex-direction: column; /* Stack text and buttons vertically */
+    align-items: center;    /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 100%;            /* Full height of the section */
+    text-align: center;
+}
+
+.home-text a.btn {
+    margin: 0 5px; /* Add horizontal spacing between buttons */
+    display: inline-block; /* Ensure buttons stay inline */
+}
+
+.home-text .btn-container {
+    display: flex; /* Align buttons side by side */
+    justify-content: center; /* Center horizontally */
+}
+
+
+
+
 
 /* About Section Start */
 .about-img{
@@ -636,6 +658,23 @@ button{
 }
 
 /* Portfolio Section */
+.carousel {
+    border-radius: 15px;
+    overflow: hidden;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); */
+}
+
+.carousel img {
+    max-height: 500px; /* Adjust height to fit design */
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
 .portfolio-section{
     padding-bottom: 50px;
 }
@@ -773,6 +812,7 @@ button{
 .contact-form .input-control{
     display: block;
     width: 100%;
+    max-width: none;
     border-radius: 25px;
     border: none;
     font-family: inherit;
