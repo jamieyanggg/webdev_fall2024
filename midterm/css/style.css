@@ -1,3 +1,4 @@
+/* Removes default padding and margins from all elements */
 *{
     box-sizing: border-box;
     padding: 0;
@@ -5,7 +6,7 @@
 }
 
 body{
-    min-height: 100vh;
+    min-height: 100vh; /* Ensures the body is at least the height of the viewport */
     background-image: url(../img/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,26 +16,25 @@ body{
     font-weight: 300;
     color: black;
     line-height: 1.5;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
     padding: 35px 15px;
     
 }
 
 body.hide-scrolling{
-    overflow-y: hidden;
-
+    overflow-y: hidden; /* Hides vertical scrolling when this class is applied */
 }
 
 body::before{
-    content: '';
+    content: ''; /* Adds a pseudo-element before the body */
     position: fixed;
     left: 0;
     top: 0;
     height: 100%;
     width: 100%;
     background-attachment: fixed;
-    z-index: -1;
-    opacity: 0.12;
+    z-index: -1; /* Places it behind other content */
+    opacity: 0.12; /* Adds a subtle overlay effect */
 }
 
 a{
@@ -59,34 +59,34 @@ ul{
 }
 
 section{
-    min-height: calc(100vh - 70px);
-    border-radius: 30px;
-    backdrop-filter: blur(5px);
-    display: none;
+    min-height: calc(100vh - 70px); /* Ensures sections take up most of the viewport height */
+    border-radius: 30px; /* Rounds the corners of each section */
+    backdrop-filter: blur(5px); /* Adds a blurred background effect */
+    display: none; /* Hides sections by default */
 }
 
 section.active{
-    display: block;
-    animation: fadeIn 0.5s ease-in-out forwards;
+    display: block; /* Displays the active section */
+    animation: fadeIn 0.5s ease-in-out forwards; /* Fades in the active section */
 }
 
 section.fade-out{
-    animation: fadeOut 0.5s ease-in-out forwards;
+    animation: fadeOut 0.5s ease-in-out forwards;  /* Fades out the section */
 }
 
 .main{
-    max-width: 1200px;
-    margin: auto;
+    max-width: 1200px; /* Sets the maximum width of the main content to 1200px for consistent layout */
+    margin: auto; /* Centers the main content horizontally */
     transition: all 0.5s ease-in-out;
     position: relative;
 }
 
 .main.fade-out{
-    opacity: 0;
+    opacity: 0; /* Fades out the main content when this class is applied */
 }
 
 .container{
-    padding: 0 40px;
+    padding: 0 40px; 
     width: 100%;
 }
 
@@ -100,7 +100,7 @@ section.fade-out{
 }
 
 .hidden{
-    display: none !important;
+    display: none !important; /* Completely hides the element, this rule takes precedence over others */
 }
 
 .sec-padding{
@@ -108,7 +108,7 @@ section.fade-out{
 }
 
 .flex-end{
-    justify-content: flex-end;
+    justify-content: flex-end; 
 }
 
 
@@ -128,14 +128,14 @@ section.fade-out{
 
 /*Buttons*/
 button{
-    font-family: inherit;
-    user-select: none;
+    font-family: inherit; /* Ensures the font matches the rest of the site */
+    user-select: none; /* Prevents text from being selectable */
 }
 .btn{
-    line-height: 1.5;
-    background-color: rgba(255,255,255,0.25);
-    border: 1px solid rgba(255,255,255,0.40);
-    padding: 10px 28px;
+    line-height: 1.5; /* Improves readability of button text */
+    background-color: rgba(255,255,255,0.25); /* Adds a translucent background */
+    border: 1px solid rgba(255,255,255,0.40); /* Adds a subtle border */
+    padding: 10px 28px; 
     display: inline-block;
     border-radius: 30px;
     color: #e02f6b;
@@ -146,30 +146,30 @@ button{
     cursor: pointer;
     user-select: none;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Ensures the hover effect doesn’t overflow */
     vertical-align: middle;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Smoothly changes the text color on hover */
 }
 
 .btn::before{
-    content: '';
+    content: ''; /* Adds a pseudo-element for the hover effect */
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
     width: 0%;
-    background-color: #e02f6b;
-    z-index: -1;
-    transition: width 0.3s ease;
+    background-color: #e02f6b; /* Sets a pink background for the hover effect */
+    z-index: -1; /* Places it behind the button text */
+    transition: width 0.3s ease; /* Smoothly expands the width */
 }
 
 .btn:hover::before{
-    width: 100%;
+    width: 100%; /* Expands to cover the entire button on hover */
 }
 
 .btn:hover{
-    color: #ffffff;
-}
+    color: #ffffff; /* Changes the text color to white on hover */
+} 
 
 /*Custom Scrollbar*/
 ::-webkit-scrollbar{
@@ -286,18 +286,18 @@ button{
 
 /* Overlay */
 .overlay{
-    position: fixed;
+    position: fixed; /* Fixes the overlay to the viewport so it doesn’t move when scrolling */
     left: 0;
     top: 0;
-    height: 100%;
-    width: 100%;
+    height: 100%; /* overlay spans the full height of the viewport */
+    width: 100%; /* overlay spans the full width of the viewport */
     background-color: transparent;
     z-index: 200;
-    visibility: hidden;
+    visibility: hidden; /* Hides the overlay by default */
 }
 
 .overlay.active{
-    visibility: visible;
+    visibility: visible; /* Makes the overlay visible when the `active` class is added */
 }
 
 /*Header*/
@@ -494,10 +494,6 @@ button{
     justify-content: center; /* Center horizontally */
 }
 
-
-
-
-
 /* About Section Start */
 .about-img{
     width: 40%;
@@ -509,8 +505,9 @@ button{
     padding: 0 15px;
 }
 
+/* Styles for the image box that wraps the about image */
 .about-img .img-box{
-    background-color: rgba(255,255,255,0.25);
+    background-color: rgba(255,255,255,0.25); /* Adds a translucent white background */
     max-width: 380px;
     border: 1px solid rgba(255,255,255,0.40);
     margin: auto;
@@ -528,8 +525,8 @@ button{
 }
 
 .about-text .skills{
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; /* Uses Flexbox to align skill items horizontally */
+    flex-wrap: wrap; /* Allows skill items to wrap onto the next line if they exceed container width */
 }
 
 .about-text .skill-item{
@@ -545,6 +542,7 @@ button{
     margin-top: 20px;
 }
 
+/* Styling for individual tab items */
 .about-tabs .tab-item{
     padding: 2px 0;
     background-color: transparent;
@@ -561,10 +559,12 @@ button{
     transition: all 0.3s ease;
 }
 
+/* Removes margin for the last tab item */
 .about-tabs .tab-item:last-child{
     margin: 0;
 }
 
+/* Adds a hover underline effect to tabs */
 .about-tabs .tab-item::before{
     content: '';
     position: absolute;
@@ -576,25 +576,30 @@ button{
     transition: width 0.3s ease;
 }
 
+/* Expands the underline on hover */
 .about-tabs .tab-item:hover::before{
     width: 100%;
 }
 
+/* Styling for active tabs */
 .about-tabs .tab-item.active::before{
     width: 100%;
     background-color: #e02f6b;
 }
 
+/* Changes the text color and opacity for active tabs */
 .about-tabs .tab-item.active{
     color: #e02f6b;
     opacity: 1;
     cursor: auto;
 }
 
+/* Timeline wrapper for displaying a vertical timeline */
 .about-text .timeline{
     position: relative;
 }
 
+/* Vertical line for the timeline */
 .about-text .timeline::before{
     content: '';
     position: absolute;
@@ -605,21 +610,25 @@ button{
     background-color: #e02f6b;
 }
 
+/* Styling for individual timeline content areas */
 .about-text .tab-content{
     padding: 40px 0;
     display: none;
 }
+
+/* Shows active tab content */
 .about-text .tab-content.active{
     display: block;
 }
 
-
+/* Styling for individual timeline items */
 .about-text .timeline-item{
     margin-bottom: 30px;
     position: relative;
     padding: 10px 0 0 40px;
 }
 
+/* Adds a circular marker for each timeline item */
 .about-text .timeline-item::before{
     content: '';
     position: absolute;
@@ -631,10 +640,12 @@ button{
     border-radius: 50%;
 }
 
+/* Removes margin for the last timeline item */
 .about-text .timeline-item:last-child{
     margin-bottom: 0;
 }
 
+/* Styling for the date text in timeline items */
 .about-text .timeline-item .date{
     display: block;
     color: #e02f6b;
@@ -642,16 +653,19 @@ button{
     margin: 0 0 10px;
 }
 
+/* Styling for the timeline item headings */
 .about-text .timeline-item h4{
     font-size: 18px;
     text-transform: capitalize;
     margin: 0 0 10px;
 }
 
+/* Styles for inline span elements in the timeline headings */
 .about-text .timeline-item h4 span{
     font-weight: 400;
 }
 
+/* Button styling inside the About section */
 .about-text .btn{
     margin: 0 15px 15px 0;
 
@@ -661,7 +675,6 @@ button{
 .carousel {
     border-radius: 15px;
     overflow: hidden;
-    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); */
 }
 
 .carousel img {
@@ -713,13 +726,13 @@ button{
     top: 0;
     height: 100%;
     width: 100%;
-    z-index: 200;
-    visibility: hidden;
+    z-index: 200; 
+    visibility: hidden; /* Hidden by default */
 }
 
 .portfolio-popup.open{
-    visibility: visible;
-    overflow-y: auto;
+    visibility: visible; /* Makes it visible when open */
+    overflow-y: auto; /* Allows scrolling if content exceeds viewport */
 }
 
 .pp-inner{
@@ -742,9 +755,9 @@ button{
 }
 
 .portfolio-popup.open .pp-content{
-    opacity: 1;
-    transform: scale(1);
-    transition: all 0.5s ease;
+    opacity: 1; /* Fully visible when open */
+    transform: scale(1); /* Expands to normal size */
+    transition: all 0.5s ease; /* Smooth animation */
 }
 
 .pp-header{
@@ -888,7 +901,6 @@ button{
     }
 }
 
-
 /* Responsive */
 @media (max-width: 991px){
     .container{
@@ -914,7 +926,6 @@ button{
         width: calc(50% - 30px);
     }
 }
-
 
 @media (max-width: 767px){
     .contact-form,
