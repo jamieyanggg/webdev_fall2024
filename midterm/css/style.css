@@ -677,6 +677,20 @@ button{
     overflow: hidden;
 }
 
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 50px;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-size: 75%, 75%;
+    border-radius: 50%;
+    border: 1px solid #e02f6b;
+}
+
+
+.carousel-indicators .active {
+    background-color: #e02f6b; /* Active indicator color */
+}
+
 .carousel img {
     max-height: 500px; /* Adjust height to fit design */
     object-fit: cover;
