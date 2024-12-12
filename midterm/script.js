@@ -77,15 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Sets the project description
         document.querySelector(".pp-body").innerHTML = portfolioItem.querySelector(".portfolio-item-details").innerHTML;
     }
-    /* Contact form Input Animation */
-    document.querySelectorAll(".input-control").forEach(input => {
-        input.addEventListener("focus", () => {
-          gsap.to(input, { boxShadow: "0 0 10px #e02f6b", duration: 0.3 }); // Highlights input fields on focus
-        });
-        input.addEventListener("blur", () => {
-          gsap.to(input, { boxShadow: "none", duration: 0.3 }); // Removes the highlight when focus is lost
-        });
-      });
+
 
       /* Section Animation on Scroll */
       gsap.utils.toArray("section").forEach(section => {
@@ -133,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
     /* Social Link Hover Animation */
     document.querySelectorAll(".social-links a").forEach(icon => {
         icon.addEventListener("mouseenter", () => {
-            gsap.to(icon, { rotate: 10, duration: 0.2, yoyo: true, repeat: 1 }); // Slight rotation effect on social icons
+            gsap.to(icon, { rotate: 20, duration: 0.2, yoyo: true, repeat: 1 }); // Slight rotation effect on social icons
         });
     });
     
@@ -147,14 +139,15 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    /* Contact Form Floating Animation */
-    gsap.to(".contact-form", {
-        y: 10,
-        duration: 2,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut", // Adds a subtle floating animation to the contact form
-    });
+      /* Contact form Input Animation */
+      document.querySelectorAll(".input-control").forEach(input => {
+        input.addEventListener("focus", () => {
+          gsap.to(input, { boxShadow: "0 0 10px #e02f6b", duration: 0.3 }); // Highlights input fields on focus
+        });
+        input.addEventListener("blur", () => {
+          gsap.to(input, { boxShadow: "none", duration: 0.3 }); // Removes the highlight when focus is lost
+        });
+      });
 });
 
 
